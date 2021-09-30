@@ -9,10 +9,13 @@ class BioScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        title: const Text(
-          'BIO',
-          style: TextStyle(
-            color: Colors.white,
+        title: SizedBox(
+
+          child: const  Text(
+            'BIO',
+            style: TextStyle(
+              color: Colors.white,
+            ),
           ),
         ),
         centerTitle: true,
@@ -30,9 +33,11 @@ class BioScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(
+                height: 20,
+              ),
               CircleAvatar(
                 radius: 50,
-                  // backgroundImage:AssetImage("images/hisham.jpg")
               ),
               SizedBox(
                 height: 10,
@@ -63,6 +68,20 @@ class BioScreen extends StatelessWidget {
                 height: 50,
               ),
               BioCard(
+                leadingIcon: Icons.edit,
+                title: "Full name",
+                subTitle: 'Hisham Al-Belbeisi',
+                traillingIcon: Icons.edit,
+                marginBottom: 15,
+              ),
+              BioCard(
+                leadingIcon: Icons.golf_course,
+                title: "Course Name",
+                subTitle: 'flutter',
+                traillingIcon: Icons.golf_course,
+                marginBottom: 15,
+              ),
+              BioCard(
                 leadingIcon: Icons.email,
                 title: "Email",
                 subTitle: 'flutter@eLancer.com',
@@ -82,7 +101,7 @@ class BioScreen extends StatelessWidget {
                   // fontWeight: FontWeight.w500,
                   fontSize: 16,
                   fontFamily: 'Gemunu',
-                  letterSpacing: 5
+                  wordSpacing: 5,
                 ),
               ),
             ],
